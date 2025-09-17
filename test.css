@@ -1,0 +1,146 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #fffafc;
+}
+
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Panel */
+.left {
+  width: 50%;
+  background: rgb(249, 200, 208);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Right Panel */
+.right {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.section h1, .section h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Photos */
+.photos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.photo {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+/* Delay Class */
+.delay-1 {
+  animation-delay: 1s !important;
+}
+
+/* Button */
+.button-area {
+  text-align: center;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  width: 0;
+  margin: 10px auto;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  animation: typing 3s steps(30, end) forwards;
+}
+
+.typewriter.delay {
+  animation-delay: 3s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
